@@ -25,4 +25,5 @@ Storage & Database:
 Infrastructure:
 - Docker / Kubernetes (Containerization & orchestration)
 - Nginx (Reverse proxy & load balancing)
-- CDN (Cloudflare / AWS CloudFront for video delivery)
+
+- CDN (Cloudflare / AWS CloudFront for video delivery if needed)
