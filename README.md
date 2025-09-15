@@ -1,5 +1,19 @@
-# AI_Mohit
-AI-Powered Knowledge Graph to Manim Animation Automation
-This system addresses the challenge of creating engaging educational content at scale by automating the pipeline from concept query to animated video delivery.
+# AI-Powered Knowledge Graph to Manim Animation Automation
 
-Warning : This repo is a rough design, the vision for the system design is in SystemDesign.md, the backend is just a file structure with generated code for reference.
+## Overview
+A system that generates educational videos automatically by retrieving concepts from a knowledge graph, generating slides and scripts using AI, and creating animations with Manim.
+
+## Tech Stack
+- Frontend: React / Next.js, WebSocket
+- Backend: FastAPI, Celery + Redis
+- Knowledge Graph: Neo4j
+- AI/ML: OpenAI API / HuggingFace, PyTorch / TensorFlow
+- Animation: Manim, FFmpeg
+- Storage & Database: PostgreSQL, S3 / MinIO
+- Infrastructure: Docker / Kubernetes, Nginx, CDN
+
+## Usage
+1. Clone the repository
+2. Install dependencies
+3. Run backend and frontend servers
+4. Query concepts and generate videos
