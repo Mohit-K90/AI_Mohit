@@ -1,0 +1,64 @@
+This document contains the structure of knowledge (nodes and edges we will pass to the knowledge graph)
+{
+  "nodes": [
+    {
+      "id": "book1",
+      "label": "Book",
+      "properties": {
+        "title": "Introduction to Algorithms",
+        "author": "Cormen et al.",
+        "year": 2009
+      }
+    },
+    {
+      "id": "chapter2",
+      "label": "Chapter",
+      "properties": {
+        "title": "Searching Algorithms",
+        "number": 2
+      }
+    },
+    {
+      "id": "concept1",
+      "label": "Concept",
+      "properties": {
+        "name": "Binary Search",
+        "domain": "DSA",
+        "difficulty": "Medium",
+        "summary": "Binary Search is an efficient algorithm for finding an item in a sorted list by repeatedly dividing the search interval in half."
+      }
+    },
+    {
+      "id": "concept2",
+      "label": "Concept",
+      "properties": {
+        "name": "Arrays",
+        "domain": "DSA",
+        "difficulty": "Easy",
+        "summary": "An array is a collection of elements stored at contiguous memory locations."
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "start": "book1",
+      "end": "chapter2",
+      "type": "CONTAINS"
+    },
+    {
+      "start": "chapter2",
+      "end": "concept1",
+      "type": "CONTAINS"
+    },
+    {
+      "start": "concept2",
+      "end": "concept1",
+      "type": "PREREQUISITE_FOR"
+    },
+    {
+      "start": "concept1",
+      "end": "concept2",
+      "type": "DEPENDS_ON"
+    }
+  ]
+}

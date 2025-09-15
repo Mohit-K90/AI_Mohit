@@ -1,0 +1,28 @@
+Frontend:
+- React / Next.js (UI)
+- TailwindCSS (Styling)
+- WebSocket (Real-time updates)
+
+Backend:
+- FastAPI (API Layer)
+- Celery + Redis (Task Queue & Caching)
+
+Knowledge Graph:
+- Neo4j (Graph Database)
+
+AI/ML:
+- OpenAI API (best option if no budget constraint) / HuggingFace Transformers (LLM for slides & scripts)
+- PyTorch / TensorFlow (if self-hosting models)
+
+Animation:
+- Manim (Educational animations)
+- FFmpeg (Video rendering)
+
+Storage & Database:
+- PostgreSQL (Metadata storage)
+- S3 / MinIO (Object storage for videos)
+
+Infrastructure:
+- Docker / Kubernetes (Containerization & orchestration)
+- Nginx (Reverse proxy & load balancing)
+- CDN (Cloudflare / AWS CloudFront for video delivery)
