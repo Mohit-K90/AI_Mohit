@@ -557,35 +557,35 @@ class ResourceManager:
 ### 1. Neo4j vs. Traditional Database
 **Decision**: Use Neo4j for knowledge storage
 **Trade-offs**:
-- ✅ **Pros**: Natural representation of concept relationships, powerful graph queries, easy to traverse related concepts
-- ❌ **Cons**: Higher complexity, specialized knowledge required, limited ecosystem compared to SQL
+-  **Pros**: Easy to traverse related concepts, familiarity with parsing.
+-  **Cons**: Limited ecosystem
 - **Rationale**: Educational content is inherently interconnected; graph queries enable sophisticated concept discovery
 
 ### 2. Synchronous vs. Asynchronous Video Generation
 **Decision**: Asynchronous processing with task queue
 **Trade-offs**:
-- ✅ **Pros**: Better user experience, system scalability, resource optimization
-- ❌ **Cons**: Increased complexity, need for progress tracking, eventual consistency
+-  **Pros**: Better user experience, system scalability, resource optimization
+-  **Cons**: Increased complexity, need for progress tracking, eventual consistency
 - **Rationale**: Video generation takes 2-5 minutes; async processing prevents UI blocking
 
 ### 3. OpenAI vs. Self-hosted LLM
 **Decision**: Support both with abstraction layer
 **Trade-offs**:
-- **OpenAI**: Higher quality, lower maintenance, usage costs, external dependency
-- **Self-hosted**: Data privacy, cost control at scale, higher maintenance overhead
+- **OpenAI**: Easy to integrate, but quite expensive considering the conversion rates, preferred but may not be possible
+- **Self-hosted**: Privacy of data, can control pricing scale
 - **Rationale**: Flexibility to choose based on deployment requirements and cost constraints
 
 ### 4. Manim vs. Alternative Animation Libraries
 **Decision**: Use Manim as primary animation engine
 **Trade-offs**:
-- ✅ **Pros**: Designed for mathematical/educational content, Python ecosystem integration, high-quality output
-- ❌ **Cons**: Steeper learning curve, longer rendering times, less general-purpose than other tools
-- **Rationale**: Manim's educational focus aligns perfectly with our use case; superior for mathematical visualizations
+-  **Pros**: Manim generates high quality animations which increase the explanability of the desired content, also it is required in the problem description
+-  **Cons**: This library was not known to me prior to this problem assignment, steeper learning curve taking into consideration the time constraint
+- **Rationale**: Manim's educational focus aligns perfectly with my use case; superior for mathematical visualizations
 
 ### 5. Microservices vs. Monolithic Architecture
 **Decision**: Modular monolith with clear service boundaries
 **Trade-offs**:
-- ✅ **Pros**: Simpler deployment, easier debugging, lower latency for inter-service communication
-- ❌ **Cons**: Less independent scalability, shared failure points
-- **Rationale**: Educational video generation is a cohesive workflow; premature microservice splitting adds unnecessary complexity
+-  **Pros**: Faster deployment, easier prototyping for a 90 minute assignment is why i chose a modular architecture for this system
+-  **Cons**: Less independent scalability, shared failure points, which is a necessary poison
+- **Rationale**: Modularity ensures adaptability and adds security requirements for all the target points
 
